@@ -46,7 +46,15 @@ RUN sdkmanager "platforms;android-25"
 
 ## So that was the SDK folks
 
-RUN apt-get install -y wget unzip
+## Preadd an emulator
+
+RUN sdkmanager "system-images;android-25;google_apis;x86"
+RUN avdmanager create avd -n emulator -k "system-images;android-25;google_apis;x86"
+
+
+## Now the studio
+
+RUN apt-get install -y wget
 
 RUN wget -O studio.zip ${studio_url} &&\
     unzip studio.zip && mv android-studio /opt &&\
