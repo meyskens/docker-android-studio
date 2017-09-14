@@ -57,7 +57,17 @@ RUN avdmanager create avd -n emulator -k "system-images;android-25;google_apis;x
 RUN apt-get install -y wget
 
 RUN wget -O studio.zip ${studio_url} &&\
-    unzip studio.zip && mv android-studio /opt &&\
+    unzip -d /opt/android-studio studio.zip &&\
     rm -f studio.zip
+
+## gradle
+
+RUN wget https://services.gradle.org/distributions/gradle-4.1-bin.zip &&\
+    mkdir /opt/gradle p &&\
+    unzip -d /opt/gradle gradle-4.1-bin.zip &&\
+    rm -f gradle-4.1-bin.zip
+
+ENV PATH=$PATH:/opt/gradle/gradle-4.1/bin
+
 
 CMD /opt/android-studio/bin/studio.sh
