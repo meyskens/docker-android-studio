@@ -48,11 +48,11 @@ RUN sdkmanager "platforms;android-25"
 
 ## Preadd an emulator
 
-RUN sdkmanager "system-images;android-25;google_apis;x86"
+RUN sdkmanager "system-images;android-25;google_apis;x86_64"
 
 RUN echo no | avdmanager \
     create avd --name emulator \
-               --package 'system-images;android-25;google_apis;x86' 
+               --package 'system-images;android-25;google_apis;x86_64' 
 
 
 ## Now the studio
