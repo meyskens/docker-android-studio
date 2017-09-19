@@ -48,7 +48,8 @@ RUN sdkmanager "platforms;android-25"
 
 ## Preadd an emulator
 
-RUN apt-get install -y file
+# Add deps
+RUN apt-get install -y file mesa-utils
 
 RUN sdkmanager "system-images;android-25;google_apis;x86_64"
 
