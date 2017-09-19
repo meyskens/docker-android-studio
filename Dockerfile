@@ -48,6 +48,8 @@ RUN sdkmanager "platforms;android-25"
 
 ## Preadd an emulator
 
+RUN apt-get install -y file
+
 RUN sdkmanager "system-images;android-25;google_apis;x86_64"
 
 RUN echo no | avdmanager \
