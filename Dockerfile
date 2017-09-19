@@ -60,7 +60,7 @@ RUN echo no | avdmanager \
 RUN apt-get install -y wget
 
 RUN wget -O studio.zip ${studio_url} &&\
-    unzip -d /opt/android-studio studio.zip &&\
+    unzip -d /opt/ studio.zip &&\
     rm -f studio.zip
 
 ## gradle
