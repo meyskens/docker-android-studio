@@ -43,6 +43,7 @@ RUN sdkmanager \
   "build-tools;26.0.1"
 
 RUN sdkmanager "platforms;android-25"
+RUN sdkmanager "platforms;android-26"
 
 ## So that was the SDK folks
 
