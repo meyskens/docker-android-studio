@@ -45,6 +45,8 @@ RUN sdkmanager \
 RUN sdkmanager "platforms;android-25"
 RUN sdkmanager "platforms;android-26"
 
+RUN sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2"
+
 ## So that was the SDK folks
 
 ## Preadd an emulator
