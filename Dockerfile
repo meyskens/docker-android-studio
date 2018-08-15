@@ -6,7 +6,7 @@ FROM openjdk:8-jdk
 
 ARG sdk_version=sdk-tools-linux-3859397.zip
 ARG android_home=/opt/android/sdk
-ARG studio_url=https://dl.google.com/dl/android/studio/ide-zips/3.0.1.0/android-studio-ide-171.4443003-linux.zip
+ARG studio_url=https://dl.google.com/dl/android/studio/ide-zips/3.1.4.0/android-studio-ide-173.4907809-linux.zip
 
 RUN apt-get update && \
     apt-get install --yes xvfb gcc-multilib lib32z1 lib32stdc++6 build-essential
